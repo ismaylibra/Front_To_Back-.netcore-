@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Royal Car Rent A Car";
 
 }
 
@@ -23,7 +23,7 @@
         <div class="row">
             @foreach (var car in Model)
             {
-                var carImage = car.CarImages.Where(n => n.IsMain).FirstOrDefault().ImageUrl;
+                var carImage = car.CarImages.Where(n => n.IsMain==true).FirstOrDefault().ImageUrl;
 
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
